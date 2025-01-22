@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/elevenlabs-chat/static/css/main.b6e56b9a.css",
+    "main.js": "/elevenlabs-chat/static/js/main.e59b0170.js",
+    "index.html": "/elevenlabs-chat/index.html",
+    "main.b6e56b9a.css.map": "/elevenlabs-chat/static/css/main.b6e56b9a.css.map",
+    "main.e59b0170.js.map": "/elevenlabs-chat/static/js/main.e59b0170.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6e56b9a.css",
+    "static/js/main.e59b0170.js"
+  ]
+}
