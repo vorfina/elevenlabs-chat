@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/elevenlabs-chat/static/css/main.b6e56b9a.css",
-    "main.js": "/elevenlabs-chat/static/js/main.e59b0170.js",
+    "main.css": "/elevenlabs-chat/static/css/main.62dbbaf7.css",
+    "main.js": "/elevenlabs-chat/static/js/main.d7add36d.js",
     "index.html": "/elevenlabs-chat/index.html",
-    "main.b6e56b9a.css.map": "/elevenlabs-chat/static/css/main.b6e56b9a.css.map",
-    "main.e59b0170.js.map": "/elevenlabs-chat/static/js/main.e59b0170.js.map"
+    "main.62dbbaf7.css.map": "/elevenlabs-chat/static/css/main.62dbbaf7.css.map",
+    "main.d7add36d.js.map": "/elevenlabs-chat/static/js/main.d7add36d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6e56b9a.css",
-    "static/js/main.e59b0170.js"
+    "static/css/main.62dbbaf7.css",
+    "static/js/main.d7add36d.js"
   ]
 }
