@@ -88,34 +88,6 @@ function App() {
     }
   }, [messages]);
 
-  useEffect(() => {
-    // Add test messages
-    setMessages([
-      {
-        text: "Hello! How can I help you today?",
-        source: "ai",
-        timestamp: new Date(),
-        displayedText: "Hello! How can I help you today?"
-      },
-      {
-        text: "I have a question about machine learning.",
-        source: "user",
-        timestamp: new Date()
-      },
-      {
-        text: "I'd be happy to help answer any questions you have about machine learning. What would you like to know?",
-        source: "ai",
-        timestamp: new Date(),
-        displayedText: "I'd be happy to help answer any questions you have about machine learning. What would you like to know?"
-      },
-      {
-        text: "Can you explain neural networks in simple terms?",
-        source: "user",
-        timestamp: new Date()
-      }
-    ]);
-  }, []); // Run once on mount
-
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 container mx-auto p-4">
