@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useConversation } from '@11labs/react';
 import { ScrollArea } from "./components/ui/scroll-area";
+import { Button } from './components/ui/button';
 
 interface Message {
   text: string;
@@ -87,6 +88,34 @@ function App() {
     }
   }, [messages]);
 
+  useEffect(() => {
+    // Add test messages
+    setMessages([
+      {
+        text: "Hello! How can I help you today?",
+        source: "ai",
+        timestamp: new Date(),
+        displayedText: "Hello! How can I help you today?"
+      },
+      {
+        text: "I have a question about machine learning.",
+        source: "user",
+        timestamp: new Date()
+      },
+      {
+        text: "I'd be happy to help answer any questions you have about machine learning. What would you like to know?",
+        source: "ai",
+        timestamp: new Date(),
+        displayedText: "I'd be happy to help answer any questions you have about machine learning. What would you like to know?"
+      },
+      {
+        text: "Can you explain neural networks in simple terms?",
+        source: "user",
+        timestamp: new Date()
+      }
+    ]);
+  }, []); // Run once on mount
+
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 container mx-auto p-4">
@@ -99,7 +128,7 @@ function App() {
               >
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${message.source === 'user'
-                    ? 'bg-blue-500 text-white'
+                    ? 'bg-primary text-white'
                     : 'bg-gray-100 text-gray-900'
                     }`}
                 >
@@ -119,19 +148,20 @@ function App() {
               <span className="mr-auto py-2">
                 {conversation.status.toString()}
               </span>
-              <button
+              <Button
                 disabled={conversation.status === 'connected' || conversation.status === 'connecting'}
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-primary text-white rounded disabled:opacity-50 disabled:cursor-not-allowed"
                 onClick={() => conversation.startSession()}
               >
                 Start
-              </button>
-              <button
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              </Button>
+              <Button
+                variant="destructive"
+                className="px-4 py-2 rounded"
                 onClick={() => conversation.endSession()}
               >
                 End
-              </button>
+              </Button>
             </div>
           </div>
         </div>
